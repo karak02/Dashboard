@@ -1,0 +1,87 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-primary: 0 255 208; 
+    --color-secondary: 216 252 247; 
+    --color-success: 11 217 132; 
+    --color-warning: 255 98 0; 
+    --color-info: 0 106 172; 
+    --color-dark: 7 38 5; 
+    --color-gray-500: 112 50 90;
+    --color-gray-100: 246 246 246; 
+    --color-gray-200: 237 237 237; 
+    --color-white: 255 255 255;
+
+    /* --background:var(--color-gray-500) ; */
+    --foreground: var(--color-dark);
+    
+    --card: var(--color-white);
+    --card-foreground: var(--color-dark);
+    
+    --popover: var(--color-white);
+    --popover-foreground: var(--color-dark);
+    
+    --primary: rgb(var(--color-primary));
+    --primary-foreground: var(--color-dark);
+    
+    --secondary: rgb(var(--color-secondary));
+    --secondary-foreground: var(--color-dark);
+    
+    --muted: var(--color-gray-100);
+    --muted-foreground: var(--color-gray-500);
+    
+    --accent: rgb(var(--color-secondary));
+    --accent-foreground: var(--color-dark);
+    
+    --destructive: rgb(var(--color-warning));
+    --destructive-foreground: var(--color-white);
+
+    --border: var(--color-gray-500);
+    --input: var(--color-gray-200);
+    --ring: var(--color-dark);
+
+    --radius: 0.75rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply flex items-center gap-2 px-4 py-2 text-sm font-medium text-gray-600 hover:bg-secondary rounded-lg;
+  }
+  
+  .vital-card {
+    @apply p-4 rounded-xl border bg-white;
+  }
+  
+  .vital-value {
+    @apply text-2xl font-bold text-gray-900; 
+  }
+  
+  .vital-unit {
+    @apply text-sm text-gray-500;
+  }
+  
+  .status-normal {
+    @apply text-green-500;
+  }
+  
+  .status-high {
+    @apply text-orange-500;
+  }
+  
+  .status-low {
+    @apply text-blue-500;
+  }
+}
